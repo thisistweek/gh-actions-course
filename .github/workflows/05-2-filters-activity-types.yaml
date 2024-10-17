@@ -1,0 +1,13 @@
+name: 05-2-Filters-Activity
+on:
+    pull_request:
+        types: closed
+        branches:
+            - main
+
+jobs:
+    one-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo Job
+              run: echo "Running whenever a PR is closed"
