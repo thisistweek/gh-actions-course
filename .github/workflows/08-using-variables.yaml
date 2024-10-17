@@ -26,8 +26,8 @@ jobs:
             - name: Overwrite Job Variable
               env:
                 OVERWRITTEN: "I have been overwritten at the step level"             
-              run: echo "Overwritten at step level - ${{env.OVERWRITTEN}}""
+              run: echo "Overwritten at step level - ${{env.OVERWRITTEN}}"
             - name: Random third step
               env:
                 OVERWRITTEN: "I have yet again been overwritten"
-              run: echo "This:is:my:random:string - ${{env.OVERWRITTEN}}""
+              run: echo "This:is:my:random:string - ${{env.OVERWRITTEN}}"
