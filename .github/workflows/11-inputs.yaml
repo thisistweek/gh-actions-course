@@ -28,7 +28,7 @@ jobs:
     deploy:
         needs: 
             - build
-        if: ${{github.job.build && inputs.dry-run == 'false'}}
+        if: ${{!inputs.dry-run }}
         runs-on: ubuntu-latest
         environment: ${{ inputs.target }}
         steps:
