@@ -7,6 +7,12 @@ jobs:
     echo1:
         runs-on: ubuntu-latest
         steps:
+            - name: Print PR title
+              run: echo "${{ github.event.pull_request.title }}"
+            - name: Print PR label
+              run: |
+                cat << EOF
+                echo "${{ toJSON(github.event.pull_request.labels) }}"
             - name: Sleepy step
               shell: bash
               run: sleep 20
