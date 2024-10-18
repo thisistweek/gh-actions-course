@@ -12,11 +12,6 @@ jobs:
               run: |
                 cat << EOF
                 echo "${{ toJSON(github.event.pull_request.labels) }}"
-            - name: Sleepy step
-              shell: bash
-              run: sleep 20
-            - name: Failing step
-              run: exit 1
             - name: I will be skipped
               if: ${{success()}}
               run: echo "I will print if previous steps succeded "
