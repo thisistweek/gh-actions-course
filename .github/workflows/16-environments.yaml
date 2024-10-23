@@ -6,14 +6,13 @@ on:
       description: 'Environment to deploy to'
       type: envrionment
       default: "staging"
-env:
-  MY_ENV_VALUE: ${{}}
 jobs:
   echo:
     runs-on: ubuntu-latest
     environment: ${{inputs.target-env}}
     env:
-      my-env-value: ${{vars.MY_ENV_VALUE || 'default-value'}}"
+      my-env-value: ${{vars.MY_ENV_VALUE || 'default-value'}}
     steps:
-      -name: Echo vars
-       run: echo "Env var: ${{env.my-env-value}}"
+      - name: Echo-vars
+        run: |
+          echo "Env var: ${{env.my-env-value}}"
