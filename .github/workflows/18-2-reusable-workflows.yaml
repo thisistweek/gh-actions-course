@@ -1,6 +1,6 @@
-name: 18-2-reusable-workflows
+name: 18 - 2 - reusable-workflows
 on:
-    workflow_dispatch:
+    - workflow_dispatch
 
 jobs:
     deploy:
