@@ -1,12 +1,12 @@
-name: 18 - 2 - reusable-workflows
+name: 18.2 - reusable-workflows
 on:
-    - workflow_dispatch
+    workflow_dispatch:
 
 jobs:
     deploy:
         uses: ./.github/workflows/18-1-reusable-workflows-definition.yaml
         with:
-            target-directory: 'my_dir'
+            target-directory: my_dir
     print-outputs:
         runs-on: ubuntu-latest
         needs: deploy
