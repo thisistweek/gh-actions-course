@@ -1,11 +1,11 @@
 name: 16-Working with Environments
 on:
-  worflow_dispatch:
+  workflow_dispatch:
     inputs:
-      name: target-env
-      description: 'Environment to deploy to'
-      type: envrionment
-      default: "staging"
+      target-env:
+        description: 'Environment to deploy to'
+        type: environment
+        default: "staging"
 jobs:
   echo:
     runs-on: ubuntu-latest
