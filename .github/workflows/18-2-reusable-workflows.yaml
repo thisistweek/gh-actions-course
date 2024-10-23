@@ -4,7 +4,7 @@ on:
 
 jobs:
     deploy:
-        uses: ./.github/workflows/18-1-reusable-workflows-definition.yaml
+        uses: ./.github/workflows/18-1-reusable-workflows.yaml
         with:
             target-directory: my_dir
     print-outputs:
